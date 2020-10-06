@@ -22,12 +22,27 @@ public class UserRegistrationMain {
 
 	}
 
+	public void lastNameValidator() {
+		System.out.println("enter your last name");
+		System.out.println("last name should start with uppercase and have min 3 characters");
+		String lastName = in.next();
+		Pattern pattern = Pattern.compile("^([A-Z])[a-zA-Z]{2,}$");
+		Matcher matcher = pattern.matcher(lastName);
+		Boolean b = matcher.find();
+		if (b)
+			System.out.println("last Name is Validated");
+		else
+			System.out.println("Please enter the name as mentioned");
+
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to user registration system");
 
 		UserRegistrationMain newUser = new UserRegistrationMain();
 
 		// first name validator
-		newUser.firstNameValidator();
+		//newUser.firstNameValidator();
+		//last name validator
+		newUser.lastNameValidator();
 	}
 }

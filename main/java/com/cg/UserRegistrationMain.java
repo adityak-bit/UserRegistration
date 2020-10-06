@@ -47,6 +47,18 @@ public class UserRegistrationMain {
         else
         	System.out.println("Please enter the correct mail id");  
 	}
+
+	public void mobileNoValidator() {
+		System.out.println("Enter your Mobile No :");
+		String mobileNo = in.nextLine();
+		Pattern pattern = Pattern.compile("^\\d{2} [1-9]\\d{9}$");
+		Matcher matcher = pattern.matcher(mobileNo);
+		Boolean b = matcher.find();
+		if (b)
+			System.out.println("Mobile No is Validated");
+		else
+			System.out.println("Please enter the correct mobile no");
+	}
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to user registration system");
@@ -58,6 +70,8 @@ public class UserRegistrationMain {
 		//last name validator
 		//newUser.lastNameValidator();
 		//email validator
-		newUser.emailValidator();
+		//newUser.emailValidator();
+		//mobile no validator
+		newUser.mobileNoValidator();
 	}
 }

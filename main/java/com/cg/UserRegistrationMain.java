@@ -82,10 +82,10 @@ public class UserRegistrationMain {
 		//last name validator
 		//newUser.lastNameValidator();
 		//email validator
-		//newUser.emailValidator();
+		newUser.emailValidator();
 		//mobile no validator
 		//newUser.mobileNoValidator();
 		//password validator
-		newUser.passwordValidator();
+		//newUser.passwordValidator();
 	}
 }
